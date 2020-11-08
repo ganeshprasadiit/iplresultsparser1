@@ -16,19 +16,35 @@ public class CricinfoBattingRowData {
 
     @Override
     public String toString() {
-        return "CricinfoBattingRowData{" +
-                "playerName='" + playerName + '\'' +
-                ", playerCountry='" + playerCountry + '\'' +
-                ", runs=" + runs +
-                ", isNotOut=" + isNotOut +
-                ", ballsFaced=" + ballsFaced +
-                ", minutesBatted=" + minutesBatted +
-                ", fours=" + fours +
-                ", sixes=" + sixes +
-                ", strikeRate=" + strikeRate +
-                ", opposition='" + opposition + '\'' +
-                ", groundName='" + groundName + '\'' +
-                ", date=" + date +
-                '}';
+        return playerName + "," + playerCountry + "," +
+                runs +
+                "," + isNotOut +
+                "," + ballsFaced +
+                "," + minutesBatted +
+                "," + fours +
+                "," + sixes +
+                "," + strikeRate +
+                "," + opposition + '\'' +
+                "," + groundName + '\'' +
+                "," + date;
+    }
+
+    public String toCsvString() {
+        return playerName + ","
+                + playerCountry + ","
+                + runs + ","
+                + isNotOut + ","
+                + ballsFaced + ","
+                + minutesBatted + ","
+                + fours +  ","
+                + sixes + ","
+                + strikeRate + ","
+                + opposition + ","
+                + groundName + ","
+                + date;
+    }
+
+    public String getCsvHeader() {
+        return "Player Name,Country,Runs,IsNotOut,Balls,Minutes,Fours,Sixes,Strike Rate,Opposition,Ground,Date";
     }
 }

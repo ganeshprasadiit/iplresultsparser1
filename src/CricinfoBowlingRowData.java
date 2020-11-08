@@ -14,17 +14,15 @@ public class CricinfoBowlingRowData {
 
     @Override
     public String toString() {
-        return "CricinfoBowlingRowData{" +
-                "playerName='" + playerName + '\'' +
-                ", overs=" + overs +
-                ", ballsPerOver=" + ballsPerOver +
-                ", maidenOvers=" + maidenOvers +
-                ", runsConceded=" + runsConceded +
-                ", wicketsTaken=" + wicketsTaken +
-                ", economy=" + economy +
-                ", oppositionTeam='" + oppositionTeam + '\'' +
-                ", groundName='" + groundName + '\'' +
-                ", date=" + date +
-                '}';
+        return playerName +
+                "," + overs +
+                "," + ballsPerOver +
+                "," + maidenOvers +
+                "," + runsConceded +
+                "," + wicketsTaken +
+                "," + economy +
+                "," + oppositionTeam +
+                "," + groundName +
+                "," + date;
     }
 }
