@@ -1,8 +1,12 @@
+package com.bigpentheory.parser.batting;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -46,7 +50,10 @@ public class EspnBattingDataParser {
             System.out.println("Total pages scanned :" + pagesSuccessfullyScanned + "out of : " + totalPages);
         }
 
+        //processBattingData(finalData);
+
         try {
+            System.out.println("Starting writing data");
             writeOutPut(finalData);
         } catch (Exception e) {
             e.printStackTrace();
@@ -64,6 +71,24 @@ public class EspnBattingDataParser {
     }
 
     public static void processBattingData(List<CricinfoBattingRowData> battingDataList) {
+        Map<String, Integer> yearOnYearRunsMap = new HashMap<>();
+        System.out.println("Starting processing batting data");
+        for (CricinfoBattingRowData battingRowData : battingDataList) {
+            if (battingRowData.date.getYear() == 1970) {
+                if (yearOnYearRunsMap.get(battingRowData.playerName) == null) {
+                    yearOnYearRunsMap.put(battingRowData.playerName, battingRowData.runs);
+                } else {
+                    yearOnYearRunsMap.put(battingRowData.playerName, yearOnYearRunsMap.get(battingRowData.playerName) + battingRowData.runs);
+                }
+            }
+        }
+
+        System.out.println("Done processing here is the summary : " + yearOnYearRunsMap.size());
+
+        for (Map.Entry entry : yearOnYearRunsMap.entrySet()) {
+            System.out.println(entry.getKey() + ":" + entry.getValue());
+        }
+
 
     }
 }

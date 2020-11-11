@@ -1,3 +1,6 @@
+package com.bigpentheory.parser.batting;
+
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CricinfoBattingRowData {
@@ -24,9 +27,9 @@ public class CricinfoBattingRowData {
                 "," + fours +
                 "," + sixes +
                 "," + strikeRate +
-                "," + opposition + '\'' +
-                "," + groundName + '\'' +
-                "," + date;
+                "," + opposition +
+                "," + groundName +
+                "," + (new SimpleDateFormat("dd/MM/yyyy").format(date));
     }
 
     public String toCsvString() {

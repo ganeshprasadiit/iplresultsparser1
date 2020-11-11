@@ -1,3 +1,5 @@
+package com.bigpentheory.parser.bowling;
+
 import java.util.Date;
 
 public class CricinfoBowlingRowData {
