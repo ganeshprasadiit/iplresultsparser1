@@ -15,7 +15,7 @@ public class EspnBattingDataParser {
     static String preString = "https://stats.espncricinfo.com/ci/engine/stats/index.html?class=2;filter=advanced;orderby=start;page=";
     static String postString = ";size=200;template=results;type=batting;view=innings";
     static Integer totalPages = 470;
-    static String outputFilePath = "D:\\DataTheory\\";
+    static String outputFilePath = "\\DataTheory\\";
     public static void main(String args[]) {
         ExecutorService executorService = Executors.newFixedThreadPool(20);
         List<Future<List<CricinfoBattingRowData>>> list = new ArrayList<>();
