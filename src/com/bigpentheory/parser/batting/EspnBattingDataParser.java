@@ -11,7 +11,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class EspnBattingDataParser {
+public class EspnBattingDataParser<BattingDetails> {
     static String preString = "https://stats.espncricinfo.com/ci/engine/stats/index.html?class=2;filter=advanced;orderby=start;page=";
     static String postString = ";size=200;template=results;type=batting;view=innings";
     static Integer totalPages = 470;

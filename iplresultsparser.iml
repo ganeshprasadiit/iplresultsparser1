@@ -11,10 +11,11 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/jsoup-1.13.1 (1).jar!/" />
+          <root url="file://$USER_HOME$/Downloads" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+        <jarDirectory url="file://$USER_HOME$/Downloads" recursive="false" />
       </library>
     </orderEntry>
   </component>

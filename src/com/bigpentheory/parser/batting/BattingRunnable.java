@@ -9,7 +9,6 @@ public class BattingRunnable implements Callable<List<CricinfoBattingRowData>> {
     private String preString;
     private String postString;
 
-
     BattingRunnable(Integer pageNum, String preString, String postString) {
         this.preString = preString;
         this.postString = postString;
